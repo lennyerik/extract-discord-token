@@ -1,1 +1,4 @@
 /target
+
+token-extractor/Cargo.lock
+token-extractor/target
