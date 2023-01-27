@@ -52,7 +52,7 @@ pub fn extract_encrypted_token(
     // Drop the database object explicitly to avoid running into problems with
     // the leveldb implementation and then remove the copied temp dir again
     drop(database);
-    let _ = fs::remove_dir_all(temp_dir);
+    let _ = fs::remove_dir_all(temp_db_path);
 
     if let Some(mut encoded_token) = result {
         // Get the start of the token (after ':')
