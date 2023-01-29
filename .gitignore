@@ -2,3 +2,6 @@
 
 token-extractor/Cargo.lock
 token-extractor/target
+
+clib/Cargo.lock
+clib/target
