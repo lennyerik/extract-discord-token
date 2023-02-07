@@ -22,15 +22,15 @@ fn main() -> Result<(), token_extractor::ExtractDiscordTokenError> {
             .get("discriminator")
             .and_then(|value| value.as_str());
         if let (Some(username), Some(discriminator)) = (username_val, discriminator_val) {
-            println!("Username: {}#{}", username, discriminator);
+            println!("Username: {username}#{discriminator}");
         }
 
         if let Some(email) = json_response.get("email").and_then(|value| value.as_str()) {
-            println!("Email: {}", email);
+            println!("Email: {email}");
         }
     }
 
-    println!("Session token: {}", token);
+    println!("Session token: {token}");
 
     println!();
     print!("Press enter to close...");
