@@ -8,3 +8,7 @@ crate-type = ["cdylib"]
 
 [dependencies]
 token-extractor = { path = "../token-extractor" }
+
+[profile.release]
+strip = true
+lto = true
